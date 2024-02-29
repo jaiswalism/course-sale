@@ -1,0 +1,266 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html{
+    min-height: 100vh;
+    width: 100%;
+}
+body{
+    font-family: "Noto Sans", sans-serif;
+	margin: 0;
+}
+
+.nav{
+    display: flex;
+    padding: 25px 100px 25px;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid lightgrey;
+}
+.logo img{
+    width: 12rem;
+}
+.menu{
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+    color: #121112;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+a.border-btn {
+    padding: 8px 20px;
+    color: #D63736;
+    border: 1px solid #D63736;
+    text-transform: capitalize;
+    border-radius: 5px;
+}
+
+a.back-btn{
+    padding: 9px 20px;
+    color: white;
+    background-color: #D63736;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.back-btn:hover{
+    box-shadow: 5px 5px white, 5px 5px 0 1px #D63736;
+    transition: 0.5s;
+}
+
+.header .container{
+    display: flex;
+    padding: 80px 0;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.right-banner, .left-banner{
+    width: 45%;
+}
+
+.y-shadow{
+    box-shadow: 5px 5px #fad133;
+    border-radius: 5px;
+    transform: translate(0, -10px);
+}
+
+.video-wrap img{
+    width: 100%;
+    line-height: 0;
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    background-color: #fad1330d;
+    background-image: url(./assets/background-2.png),url(./assets/background-1.png);
+    background-repeat: no-repeat, no-repeat;
+    background-position: bottom 50px left -112px, top -50px right -43px;
+}
+
+.container{
+    max-width: 1280px;
+}
+
+mark{
+    background: linear-gradient(0deg, #fad133 50%, transparent 50%);
+    color: #121112;
+    font-weight: 700;
+}
+
+.tag{
+    background-color: #fad133;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    padding: 2px 10px;
+}
+
+.features{
+    margin-top: 20px;
+}
+
+.features li{
+    list-style: none;
+}
+
+.point-list{
+    display: flex;
+    justify-content: flex-start;
+    margin-bottom: 15px;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+}
+
+h1{
+    font-size: 32px;
+    font-weight: 600;
+    font-family: "Noto Serif", serif;
+}
+
+.uppercase{
+    text-transform: uppercase;
+}
+
+.outline-btn{
+    padding: 14px 28px;
+    border-radius: 6px;
+    color: #121212;
+    border: 2px solid #121212;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center
+}
+
+.outline-btn:hover{
+    box-shadow: 5px 5px 0 1px #121212;
+    transition: 0.5s;
+}
+
+.cta-btns{
+    display: flex;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    gap: 20px;
+    font-size: 14px;
+}
+
+.cta-btns .back-btn{
+    padding: 14px 28px;
+    border-radius: 6px;
+}
+
+.cta-link a{
+    font-size: 14px;
+    color: #D63736;
+    display: inline-flex;
+    gap: 10px;
+    align-items: center;
+}
+
+.ham-btn{
+    filter: none;
+    width: 30px;
+    height: 30px;
+    display: none;
+}
+
+@media (max-width: 767px) {
+    .container{
+        flex-direction: column-reverse;
+        max-width: 720px;
+    }
+    .logo img{
+        width: 9rem;
+        justify-self: center;
+    }
+    .menu{
+        display: none;
+    }
+    .ham-btn{
+        display: contents;
+    }
+    .nav{
+        padding: 25px 40px 25px;
+    }
+    .left-banner, .right-banner{
+        width: 75%;
+    }
+    .tag{
+        font-size: 12px;
+    }
+    h1{
+        font-size: 28px;
+    }
+    .cta-btns{
+        flex-direction: column;
+    }
+    .back-btn, .outline-btn{
+        font-size: 13px;
+        text-align: center;
+        justify-content: center;
+    }
+
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+    .container{
+        flex-direction: column-reverse;
+        max-width: 720px;
+    }
+    .tab-hid{
+        display: none;
+    }
+    .nav{
+        padding: 25px 40px 25px;
+    }
+    .left-banner, .right-banner{
+        width: 80%;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    .nav{
+        padding: 25px 40px 25px;
+    }
+    .menu{
+        gap: 10px;
+    }
+    .logo img{
+        width: 9.5rem;
+    }
+    .left-banner{
+        width: calc(100% - 100px);
+    }
+    .container{
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .left-banner{
+        width: calc(100% - 400px);
+    }
+    .container{
+        max-width: 1160px;
+    }
+    .nav{
+        max-width: 1500px;
+        margin: 0 auto;
+        padding: 25px 30px 25px;
+    }
+}
